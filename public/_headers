@@ -1,0 +1,10 @@
+# Cloudflare Pages headers (copied into dist/ by Vite)
+
+# The ONNX model never changes for a given filename — cache it hard.
+# The app also caches it in IndexedDB after the first visit.
+/model/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  X-Content-Type-Options: nosniff
